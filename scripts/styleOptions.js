@@ -9,7 +9,7 @@ export const StyleOptions = async () => {
   let styleOptionsHTML = `<h4>Select which style you'd like: </h4>`;
 
   const styleStringArray = styles.map((style) => {
-    return `<input type="radio" name="style" value="${style.id}"/>${style.style}  `;
+    return `<div><input type="radio" name="style" value="${style.id}"/>${style.style}</div>`;
   });
 
   styleOptionsHTML += styleStringArray.join(" ");

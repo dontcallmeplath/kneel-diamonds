@@ -9,7 +9,7 @@ export const CaratOptions = async () => {
   let sizeOptionsHTML = `<h4>Select which carat weight you'd like: </h4>`;
 
   const sizeStringArray = carats.map((size) => {
-    return `<input type="radio" name="carat" value="${size.id}"/>${size.carats}  `;
+    return `<div><input type="radio" name="carat" value="${size.id}"/>${size.carats}</div>`;
   });
 
   sizeOptionsHTML += sizeStringArray.join(" ");
