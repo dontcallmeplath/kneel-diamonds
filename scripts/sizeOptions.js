@@ -1,4 +1,8 @@
+import { setSizeId } from "./transientState.js";
+
 export const CaratOptions = async () => {
+  document.addEventListener("change", handleSizeChoice);
+
   const response = await fetch("http://localhost:8088/sizes");
   const carats = await response.json();
 
@@ -11,4 +15,10 @@ export const CaratOptions = async () => {
   sizeOptionsHTML += sizeStringArray.join(" ");
 
   return sizeOptionsHTML;
+};
+
+const handleSizeChoice = (event) => {
+  if (event.target.name === "carat") {
+    setSizeId(parseInt(event.target.value));
+  }
 };
