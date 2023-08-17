@@ -1,11 +1,13 @@
 import { MetalOptions } from "./metalOptions.js";
 import { CaratOptions } from "./sizeOptions.js";
 import { StyleOptions } from "./styleOptions.js";
+import { orderButtonBuilder } from "./orderButton.js";
 
 const render = async () => {
   const showMetalTypeHTML = await MetalOptions();
   const showCaratSizeHTML = await CaratOptions();
   const showStyleHTML = await StyleOptions();
+  const buttonHTML = orderButtonBuilder();
   const composedHTML = `
  <h1>
       Kneel Diamonds &#128141 <br />
@@ -35,12 +37,12 @@ const render = async () => {
     </section>
 </article>
 
-<article class="order">
+<div class="order">
+    ${buttonHTML}
+</div>
 
-</article>
-
+<h2>Custom Jewelry Orders</h2>
 <article class="customOrders">
-    <h2>Custom Jewelry Orders</h2>
 </article>
 
 `;

@@ -9,7 +9,7 @@ export const MetalOptions = async () => {
   let metalOptionsHTML = `<h4>Select which type of metal you'd like: </h4>`;
 
   const metalStringArray = metals.map((metal) => {
-    return `<input type="radio" name="metal" value="${metal.id}"/>${metal.metal}  `;
+    return `<div><input type="radio" name="metal" value="${metal.id}"/>${metal.metal}</div>`;
   });
 
   metalOptionsHTML += metalStringArray.join(" ");
