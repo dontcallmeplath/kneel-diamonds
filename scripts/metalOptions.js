@@ -3,8 +3,12 @@ export const MetalOptions = async () => {
   const metals = await response.json();
 
   let metalOptionsHTML = `<h4>Select which type of metal you'd like: </h4>`;
-  for (const type of metals) {
-    metalOptionsHTML += `<input type="radio" name="metal" value="${type.id}"/>${type.metal}  `;
-  }
+
+  const metalStringArray = metals.map((metal) => {
+    return `<input type="radio" name="metal" value="${metal.id}"/>${metal.metal}  `;
+  });
+
+  metalOptionsHTML += metalStringArray.join(" ");
+
   return metalOptionsHTML;
 };
