@@ -8,15 +8,12 @@ const transientState = {
 // exportable setter functions to update the value of each property
 export const setMetalId = (chosenMetal) => {
   transientState.metalId = chosenMetal;
-  console.log(transientState.metalId);
 };
 export const setStyleId = (chosenStyle) => {
   transientState.styleId = chosenStyle;
-  console.log(transientState.styleId);
 };
 export const setSizeId = (chosenSize) => {
   transientState.sizeId = chosenSize;
-  console.log(transientState.sizeId);
 };
 
 export const orderPlaced = async () => {
@@ -35,6 +32,9 @@ export const orderPlaced = async () => {
   // Send the transient state to your API
   const response = await fetch("http://localhost:8088/orders", postOptions);
 
-  const customEvent = new CustomEvent("newOrderCreated");
-  document.dispatchEvent(customEvent);
+  // const customOrderEvent = new CustomEvent("newOrderCreated");
+  // document.dispatchEvent(customOrderEvent);
+
+  const customChangeEvent = new CustomEvent("stateChanged");
+  document.dispatchEvent(customChangeEvent);
 };

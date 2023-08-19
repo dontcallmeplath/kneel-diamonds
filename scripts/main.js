@@ -2,12 +2,14 @@ import { MetalOptions } from "./metalOptions.js";
 import { CaratOptions } from "./sizeOptions.js";
 import { StyleOptions } from "./styleOptions.js";
 import { orderButtonBuilder } from "./orderButton.js";
+import { showOrders } from "./placedOrders.js";
 
 const render = async () => {
   const showMetalTypeHTML = await MetalOptions();
   const showCaratSizeHTML = await CaratOptions();
   const showStyleHTML = await StyleOptions();
   const buttonHTML = orderButtonBuilder();
+  const showOrderHTML = await showOrders();
   const composedHTML = `
  <h1>
       Kneel Diamonds &#128141 <br />
@@ -43,6 +45,7 @@ const render = async () => {
 
 <h2>Custom Jewelry Orders</h2>
 <article class="customOrders">
+${showOrderHTML}
 </article>
 
 `;
@@ -51,3 +54,7 @@ const render = async () => {
 };
 
 render();
+document.addEventListener("stateChanged", (event) => {
+  console.log("State of data has changed. Regenerating HTML...");
+  render();
+});

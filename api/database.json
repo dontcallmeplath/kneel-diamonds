@@ -88,6 +88,54 @@
       "styleId": 1,
       "sizeId": 2,
       "id": 3
+    },
+    {
+      "metalId": 1,
+      "styleId": 2,
+      "sizeId": 2,
+      "id": 4
+    },
+    {
+      "metalId": 1,
+      "styleId": 3,
+      "sizeId": 2,
+      "id": 5
+    },
+    {
+      "metalId": 2,
+      "styleId": 2,
+      "sizeId": 3,
+      "id": 6
+    },
+    {
+      "metalId": 2,
+      "styleId": 2,
+      "sizeId": 4,
+      "id": 7
+    },
+    {
+      "metalId": 1,
+      "styleId": 3,
+      "sizeId": 3,
+      "id": 8
+    },
+    {
+      "metalId": 5,
+      "styleId": 2,
+      "sizeId": 5,
+      "id": 9
+    },
+    {
+      "metalId": 0,
+      "styleId": 0,
+      "sizeId": 0,
+      "id": 10
+    },
+    {
+      "metalId": 2,
+      "styleId": 1,
+      "sizeId": 2,
+      "id": 11
     }
   ]
 }
