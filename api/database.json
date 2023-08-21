@@ -126,16 +126,22 @@
       "id": 9
     },
     {
-      "metalId": 0,
-      "styleId": 0,
-      "sizeId": 0,
-      "id": 10
-    },
-    {
       "metalId": 2,
       "styleId": 1,
       "sizeId": 2,
       "id": 11
+    },
+    {
+      "metalId": 1,
+      "styleId": 1,
+      "sizeId": 2,
+      "id": 12
+    },
+    {
+      "metalId": 3,
+      "styleId": 3,
+      "sizeId": 4,
+      "id": 13
     }
   ]
 }
